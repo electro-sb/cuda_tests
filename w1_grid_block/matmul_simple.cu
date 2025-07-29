@@ -53,8 +53,9 @@ int main() {
     cudaCheckError("cudaMemcpy failed");
     //Calculate grid size to make sure sufficient threads to accomodate all the elements
     //launch kernel
-    dim3 grid(DSIZE / BLOCK_SIZE, DSIZE / BLOCK_SIZE);//grid size
     dim3 block(BLOCK_SIZE, BLOCK_SIZE);//block size
+    dim3 grid(DSIZE / block.x, DSIZE / block.y);//grid size standard way
+    
     matmulSimple<<<grid, block>>>(d_A, d_B, d_C);
     cudaCheckError("kernel launch failed");
     //Copy data back to host (CPU)
