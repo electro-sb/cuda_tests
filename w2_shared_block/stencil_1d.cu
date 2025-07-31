@@ -39,6 +39,7 @@ __global__ void stencil1D(int *input, int *output) {
     output[gIdx] = result;
 }
 
+//Helper function to fill array with 1
 void fill_ints(int *x, int n) {
     fill_n(x, n, 1);
 }
