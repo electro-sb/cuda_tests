@@ -39,6 +39,10 @@ int main() {
     h_A = (float *)malloc(DSIZE * sizeof(float));
     h_B = (float *)malloc(DSIZE * sizeof(float));
     h_C = (float *)malloc(DSIZE * sizeof(float));
+    //timing variables
+    clock_t t0, t1;
+    double t1sum;
+    t0 = clock();
     //allocate memory on device (GPU)
     cudaMalloc((void **)&d_A, DSIZE * sizeof(float));
     cudaMalloc((void **)&d_B, DSIZE * sizeof(float));
@@ -77,7 +81,10 @@ int main() {
                 break;
         }
     }
-
+    // Compute GPU timing
+    t1 = clock();
+    t1sum = ((double)(t1-t0))/CLOCKS_PER_SEC;
+    printf ("Init took %f seconds.  Begin compute\n", t1sum);
     //free memory on host
     free(h_A);
     free(h_B);
