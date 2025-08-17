@@ -15,18 +15,36 @@ const int THREADS_PER_BLOCK = 256;
 __global__ void convolution1D(const float *input, const float *kernel, float *output, int input_size, int kernel_size) {
     int idx = threadIdx.x + blockIdx.x * blockDim.x;
     int output_size = input_size - kernel_size + 1;
-    if (idx < output_size) {
+    if(idx < output_size) {
         float sum = 0.0f;
-        int radius = kernel_size / 2;
-        for (int i = 0; i < kernel_size; i++) {
-            int input_idx = idx + i - radius;
-            if (input_idx >= 0 && input_idx < input_size) {
-                sum += input[input_idx] * kernel[i];
+        
+        // For valid convolution: output[idx] corresponds to input starting at idx
+        for(int k = 0; k < kernel_size; ++k) {
+            int input_idx = idx + k;  // Start at idx, go forward
+            if(input_idx < input_size) {
+                sum += input[input_idx] * kernel[k];
             }
         }
         output[idx] = sum;
     }
 }
+
+
+__global__ void convolution1D_explicit(const float* input, const float* kernel, float* output,
+    int input_size, int kernel_size) {
+    int idx = blockDim.x * blockIdx.x + threadIdx.x;
+    int output_size = input_size - kernel_size + 1;
+
+    if(idx < output_size) {
+        float sum = 0.0f;
+
+        for(int k = 0; k < kernel_size; ++k) {
+            sum += input[idx + k] * kernel[k];
+        }
+        output[idx] = sum;
+    }
+}
+
 
 int main() {
     const int input_size = 512;
@@ -56,7 +74,7 @@ int main() {
     cudaCheckError("cudaMemcpy failed");
     
     int blocks = (input_size + THREADS_PER_BLOCK - 1) / THREADS_PER_BLOCK;
-    convolution1D<<<blocks, THREADS_PER_BLOCK>>>(d_input, d_kernel, d_output, input_size, kernel_size);
+    convolution1D_explicit<<<blocks, THREADS_PER_BLOCK>>>(d_input, d_kernel, d_output, input_size, kernel_size);
     cudaCheckError("convolution1D");
     cudaDeviceSynchronize();
     cudaMemcpy(h_output, d_output, output_size * sizeof(float), cudaMemcpyDeviceToHost);
