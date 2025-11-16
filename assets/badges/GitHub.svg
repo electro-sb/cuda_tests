@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="124" height="20">
-    <linearGradient id="b" x2="0" y2="100%">
-        <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-        <stop offset="1" stop-opacity=".1"/>
-    </linearGradient>
-    <mask id="anybadge_2">
-        <rect width="124" height="20" rx="10" fill="#fff"/>
-    </mask>
-    <g mask="url(#anybadge_2)">
-        <path fill="#8B4513" d="M0 0h124v20H0z"/>
-        <path fill="#262626" d="M50 2h65v16H50z"/>
-        <path fill="#262626" d="M114,18 a1,1 0 0,0 0,-16"/>
-        <path fill="url(#b)" d="M0 0h124v20H0z"/>
-    </g>
-    <g fill="white" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="25.0" y="14">GitHub</text>
-    </g>
-    <g fill=" saddlebrown" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="87.0" y="14">electro_sb</text>
-    </g>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:1aabff03c642249169f53ed197fe75a3b554921b867c1d8f405a4dfdcab6f7a1
+size 972

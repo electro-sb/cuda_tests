@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="123" height="20">
-    <linearGradient id="b" x2="0" y2="100%">
-        <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-        <stop offset="1" stop-opacity=".1"/>
-    </linearGradient>
-    <mask id="anybadge_4">
-        <rect width="123" height="20" rx="10" fill="#fff"/>
-    </mask>
-    <g mask="url(#anybadge_4)">
-        <path fill="#8B4513" d="M0 0h123v20H0z"/>
-        <path fill="#262626" d="M26 2h88v16H26z"/>
-        <path fill="#262626" d="M113,18 a1,1 0 0,0 0,-16"/>
-        <path fill="url(#b)" d="M0 0h123v20H0z"/>
-    </g>
-    <g fill="white" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="13.0" y="14">git</text>
-    </g>
-    <g fill=" saddlebrown" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="74.5" y="14">main@7876d3c</text>
-    </g>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:f06d8b5c6ca6ab2d1e84185b62f7da69567f61e8ea2beb4cfe444e87299cbd0e
+size 971

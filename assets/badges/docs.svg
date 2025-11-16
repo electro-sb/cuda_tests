@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="125" height="20">
-    <linearGradient id="b" x2="0" y2="100%">
-        <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-        <stop offset="1" stop-opacity=".1"/>
-    </linearGradient>
-    <mask id="anybadge_8">
-        <rect width="125" height="20" rx="10" fill="#fff"/>
-    </mask>
-    <g mask="url(#anybadge_8)">
-        <path fill="#808080" d="M0 0h125v20H0z"/>
-        <path fill="#262626" d="M38 2h78v16H38z"/>
-        <path fill="#262626" d="M115,18 a1,1 0 0,0 0,-16"/>
-        <path fill="url(#b)" d="M0 0h125v20H0z"/>
-    </g>
-    <g fill="white" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="19.0" y="14">docs</text>
-    </g>
-    <g fill=" gray" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
-        <text x="81.5" y="14">./README.md</text>
-    </g>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:839199d80074ed27865a8302922c27017ef98cd38b963ca022a84db29cffa1ee
+size 964
