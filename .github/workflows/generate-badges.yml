@@ -48,6 +48,9 @@ jobs:
     - name: Run badge generator
       run: python scripts/badge_generator.py
 
+    - name: Copy Punk logo
+      run: cp badge_tools/assets/logos/punk.png assets/badges/Vector_Punk_1.png
+
     - name: Ensure README.md exists with header
       run: |
         if [ ! -f README.md ]; then
