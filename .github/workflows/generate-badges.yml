@@ -49,7 +49,7 @@ jobs:
       run: python scripts/badge_generator.py
 
     - name: Copy Punk logo
-      run: cp badge_tools/assets/logo/punk.png assets/badges/Vector_Punk_1.png
+      run: cp badge_tools/assets/logo/Vector_Punk_1.png assets/badges/Vector_Punk_1.png
 
     - name: Ensure README.md exists with header
       run: |
