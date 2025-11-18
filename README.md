@@ -1,26 +1,19 @@
-<!--- Badges --->
 [![Profile](./assets/badges/profile.svg)](https://github.com/electro-sb)
-<a href="https://github.com/electro-sb">
-  <img src="./assets/badges/Vector_Punk_1.png" alt="Punk Logo" width="20" style="vertical-align: middle;"/>
-</a>
-
-### Information
+###### Project Information:
 <!--- Badges --->
 [![Project](./assets/badges/Project.svg)](./README.md)
 [![Version](./assets/badges/version.svg)](./pyproject.toml)
+###### Metadata:
+<!--- Badges --->
 [![Git Commit](./assets/badges/git.svg)](./README.md)
 [![Last Updated](./assets/badges/updated.svg)](./README.md)
-
-
-### Other information
-<!--- Badges --->
 [![Build Status](./assets/badges/build.svg)](./pyproject.toml)
+###### Documentation:
+<!--- Badges --->
 [![Documentation](./assets/badges/docs.svg)](./README.md)
-
-### License
+###### License:
 <!--- Badges --->
 [![License](./assets/badges/license.svg)](./LICENSE.md)
-
 
 Running the code
 ```shell
